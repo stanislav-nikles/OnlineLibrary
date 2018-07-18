@@ -24,7 +24,7 @@ CREATE TABLE books (
   page_count   INT          NOT NULL,
   isbn         VARCHAR(100) NOT NULL UNIQUE,
   publish_year BIGINT       NOT NULL,
-  gengre_id    BIGINT REFERENCES genres (id),
+  genre_id    BIGINT REFERENCES genres (id),
   publisher_id BIGINT REFERENCES publishers (id),
   image        VARCHAR(500)  DEFAULT NULL,
   descr        VARCHAR(5000) DEFAULT NULL,
