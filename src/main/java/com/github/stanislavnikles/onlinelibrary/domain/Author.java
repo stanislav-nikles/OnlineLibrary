@@ -5,6 +5,12 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * Simple JavaBean domain object that represent Author of {@link Book}.
+ *
+ * @author Stanislav Nikles
+ * @since 1.0
+ */
 @Data
 @Entity
 @Table(name = "authors")

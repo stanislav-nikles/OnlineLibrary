@@ -6,6 +6,12 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Simple JavaBean domain object that represent a Book.
+ *
+ * @author Stanislav Nikles
+ * @since 1.0
+ */
 @Data
 @Entity
 @Table(name = "books")

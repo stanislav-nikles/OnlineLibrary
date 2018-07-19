@@ -4,6 +4,12 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+/**
+ * Simple JavaBean domain object that represent Publisher of {@link Book}.
+ *
+ * @author Stanislav Nikles
+ * @since 1.0
+ */
 @Data
 @Entity
 @Table(name = "publishers")
