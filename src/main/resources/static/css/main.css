@@ -1,0 +1,78 @@
+
+body {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 16px;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+/* Перавый экран*/
+
+.header {
+    height: 691px;
+
+    background: url("../image/header-bg.jpg") no-repeat center;
+    background-size: cover;
+
+    padding-top: 50px;
+}
+
+.header p, a {
+    color: #fff;
+    margin: 0;
+}
+
+.header a:hover {
+    color: #cbb58b;
+    text-decoration: none;
+}
+
+.menu, .logo {
+    text-transform: uppercase;
+}
+
+.menu {
+    padding-top: 15px;
+}
+
+.menu__item {
+    margin-right: 50px;
+}
+
+.offer {
+    padding-top: 150px;
+
+    color: #fff;
+}
+
+.offer__title {
+    font-weight: bold;
+}
+
+.offer__intro {
+    font-size: 20px;
+}
+
+.offer__text {
+    padding-top: 10px;
+}
+
+.bt {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 15px;
+
+    color: #3e3e3e;
+    border-radius: 2px;
+
+    background: #cbb58b;
+}
+
+.bt:hover {
+    background: #fff;
+}

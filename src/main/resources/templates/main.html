@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,13 +8,88 @@
 
     <title>OnlineLibrary | Main</title>
 
-    <link href="/static/css/bootstrap.min.css"
-          th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
+    <link rel="stylesheet"
+          href="/static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}">
+
+    <link rel="stylesheet"
+          href="/static/css/main.css" th:href="@{css/main.css}">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900">
 </head>
 <body>
 
     <header id="header" class="header">
         <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3">
+                    <div class="container-fluid">
+                        <div class="logo row">
+
+                            <div class="logo__img col-lg-3">
+                                <a href="#"><img th:src="@{/image/logo.png}" alt="logo"></a>
+                            </div>
+
+                            <div class="logo__text col-lg-9">
+                                <p>Онлайн</p>
+                                <p>Библиотека</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 ml-auto">
+                    <nav>
+                        <ul class="menu d-flex justify-content-end">
+
+                            <li class="menu__item">
+                                <a href="#">Новинки</a>
+                            </li>
+
+                            <li class="menu__item">
+                                <a href="#">Популярное</a>
+                            </li>
+
+                            <li class="menu__item">
+                                <a href="#"> О Проекте</a>
+                            </li>
+
+                            <li class="menu__item">
+                                <a href="#">Контакты</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10">
+
+                    <div class="offer">
+                        <h1 class="offer__title display-4">
+                            Откройте для себя<br>Потрясающий мир чтения
+                        </h1>
+                        <p class="offer__intro">
+                            Библиотека - это место, где каждый может исследовать, открывать и заниматься
+                        </p>
+                        <p class="offer__text">
+                            Десятки тысяч современных и классических электронных книг в отличном качестве
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+
+                    <a href="#" class="bt">Посмотреть коллекцию</a>
+
+                </div>
+            </div>
 
         </div>
     </header>
