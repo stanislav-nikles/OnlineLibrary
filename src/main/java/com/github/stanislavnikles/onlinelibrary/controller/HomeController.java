@@ -5,11 +5,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class MainController {
+public class HomeController {
 
-    @RequestMapping(value = {"/", "/main"})
+    @RequestMapping(value = {"/", "/home"})
     public String getMainPage(Model model) {
         model.addAttribute("message", "Online Library!");
-        return "main";
+        return "home";
     }
 }
