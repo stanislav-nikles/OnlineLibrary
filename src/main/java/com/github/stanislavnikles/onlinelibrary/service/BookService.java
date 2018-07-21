@@ -13,6 +13,8 @@ public interface BookService {
 
     List<Book> findAll();
 
+    List<Book> findPopular();
+
     List<Book> findByGenre(Genre genre);
 
     List<Book> findByPublisher(Publisher publisher);

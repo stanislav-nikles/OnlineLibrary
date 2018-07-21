@@ -4,6 +4,7 @@ import com.github.stanislavnikles.onlinelibrary.domain.Book;
 import com.github.stanislavnikles.onlinelibrary.domain.Genre;
 import com.github.stanislavnikles.onlinelibrary.domain.Publisher;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 import java.util.Optional;
@@ -48,4 +49,11 @@ public interface BookRepository extends JpaRepository<Book, Long> {
      * @return the {@link Book} with the given isbn or {@literal Optional.empty()} if none found.
      */
     Optional<Book> findBookByIsbn(String isbn);
+
+    /**
+     * Retrieves top 5 most popular {@link Book}'s by rating.
+     *
+     * @return top 5 most popular {@link Book}'s or {@literal Optional.empty()} if none found.
+     */
+    Optional<List<Book>> findTop5ByOrderByRatingDesc();
 }
