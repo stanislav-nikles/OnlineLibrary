@@ -92,3 +92,38 @@ VALUES (3, 'Братья Карамазовы', 'dostoevskiy-fedor-mihaylovich-b
  '5715-dostoevskiy-fedor-mihaylovich-bratya-karamazovy.jpg', null, 0, 0);
 
  INSERT INTO author_book VALUES (3, 3, 3)
+
+
+-- Insert new data
+INSERT INTO authors VALUES (6, 'Чехов Антон Павлович');
+INSERT INTO authors VALUES (7, 'Джек Лондон');
+INSERT INTO authors VALUES (8, 'Марк Твен');
+INSERT INTO authors VALUES (9, 'Жуль Верн');
+
+INSERT
+  INTO books
+VALUES (4, 'Дама с собачкой', 'anton-pavlovich-chehov-dama-s-sobachkoy-ru.pdf', 10, 9781234567900, 2013, 1, 2,
+ '16785-anton-pavlovich-chehov-dama-s-sobachkoy-ru.jpg', null, 0, 0);
+
+ INSERT INTO author_book VALUES (4, 6, 4);
+
+INSERT
+  INTO books
+VALUES (5, 'Мартин Иден', 'dzhek-london-martin-iden-ru.pdf', 616, 9781234567901, 2012, 1,8,
+ '16287-dzhek-london-martin-iden-ru.jpg', null, 0, 0);
+
+ INSERT INTO author_book VALUES (5, 7, 5);
+
+INSERT
+  INTO books
+VALUES (6, 'История с призраком', 'mark-tven-istoriya-s-prizrakom.pdf', 3, 9781234567902, 2014, 1,6,
+ '8308-mark-tven-istoriya-s-prizrakom.jpg', null, 0, 0);
+
+ INSERT INTO author_book VALUES (6, 8, 6);
+
+INSERT
+  INTO books
+VALUES (7, 'Капитан Немо', 'zhyul-vern-kapitan-nemo.pdf', 2755, 9781234567903, 2010, 1,6,
+ '1450-zhyul-vern-kapitan-nemo.jpg', null, 0, 0);
+
+ INSERT INTO author_book VALUES (7, 9, 7);
