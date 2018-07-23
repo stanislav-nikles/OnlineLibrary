@@ -51,9 +51,9 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     Optional<Book> findBookByIsbn(String isbn);
 
     /**
-     * Retrieves top 5 most popular {@link Book}'s by rating.
+     * Retrieves top 4 most popular {@link Book}'s by rating.
      *
-     * @return top 5 most popular {@link Book}'s or {@literal Optional.empty()} if none found.
+     * @return top 4 most popular {@link Book}'s or {@literal Optional.empty()} if none found.
      */
-    Optional<List<Book>> findTop5ByOrderByRatingDesc();
+    Optional<List<Book>> findTop4ByOrderByRatingDesc();
 }

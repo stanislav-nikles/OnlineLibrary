@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>OnlineLibrary | Main</title>
+    <title>Онлайн Библиотека | Главная</title>
 
     <link rel="stylesheet"
           href="/static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}">
@@ -24,8 +24,8 @@
 
                 <div class="col-lg-3">
                     <div class="container-fluid">
-                        <div class="logo row">
 
+                        <div class="logo d-flex">
                             <div class="logo__img col-lg-3">
                                 <a href="#"><img th:src="@{/image/logo.png}" alt="logo"></a>
                             </div>
@@ -34,11 +34,10 @@
                                 <p>Онлайн</p>
                                 <p>Библиотека</p>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
-
                 <div class="col-lg-9 ml-auto">
                     <nav>
                         <ul class="menu d-flex justify-content-end">
@@ -64,12 +63,11 @@
                 </div>
 
             </div>
-
             <div class="row">
-                <div class="col-lg-10">
 
+                <div class="col-lg-10">
                     <div class="offer">
-                        <h1 class="offer__title display-4">
+                        <h1 class="display-4 offer__title ">
                             Откройте для себя<br>Потрясающий мир чтения
                         </h1>
                         <p class="offer__intro">
@@ -79,30 +77,116 @@
                             Десятки тысяч современных и классических электронных книг в отличном качестве
                         </p>
                     </div>
-
                 </div>
-            </div>
 
+            </div>
             <div class="row">
+
                 <div class="col-lg-3">
-
-                    <a href="#" class="bt">Посмотреть коллекцию</a>
-
+                    <a href="#" class="button get-books-button">Посмотреть коллекцию</a>
                 </div>
-            </div>
 
+            </div>
         </div>
     </header>
 
-    <div role="main">
+
+    <div id="popular" class="popular">
         <div class="container">
-            <h1 th:text="${message}"></h1>
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="title">
+                        Популярные книги
+                    </h1>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-lg-3" th:each="book : ${popular}">
+                    <div class="popular-book">
+                        <div class="card popular-book__item">
+
+                            <img class="card-img-top popular-book__img"
+                                 th:src="@{'books/image/' + ${book.image}}" alt="img">
+
+                            <div class="card-body popular-book__body">
+                                <h5 class="card-title" th:text="${book.name}"></h5>
+
+                                <div class="card-text" th:each="author : ${book.authors}">
+                                    <p th:text="${author.fullName}"></p>
+                                </div>
+
+                                <a href="#" class="link">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="touch" class="touch">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-10">
+                    <div class="offer">
+                        <h1 class="offer__title ">
+                            Создайте новый аккаунт в один клик
+                        </h1>
+                        <p class="offer__intro">
+                            или войдите в систему как зарегистрированный пользователь
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <form action="" class="form">
+                <div class="row">
+
+                    <div class="col-lg-5">
+                        <input type="email" placeholder="Введите ваш email" class="form__input" required>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <input type="submit" value="Перейти" class="button form__button">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
     <footer id="footer" class="footer">
         <div class="container">
+            <div class="row">
 
+                <div class="col-lg-3 l">
+                    <div class="container-fluid">
+
+                        <div class="logo d-flex">
+                            <div class="logo__img col-lg-3">
+                                <img th:src="@{/image/logo.png}" alt="logo">
+                            </div>
+
+                            <div class="logo__text col-lg-9">
+                                <p>Онлайн</p>
+                                <p>Библиотека</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="credits d-flex justify-content-center">
+                <p>Тестовый проект для изучения Spring Framework</p>
+            </div>
+
+        </div>
         </div>
     </footer>
 

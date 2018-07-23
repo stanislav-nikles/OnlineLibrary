@@ -36,7 +36,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> findPopular() {
-        return bookRepository.findTop5ByOrderByRatingDesc()
+        return bookRepository.findTop4ByOrderByRatingDesc()
                 .orElse(ImmutableList.of());
     }
 
